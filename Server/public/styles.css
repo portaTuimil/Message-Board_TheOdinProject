@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    height: 100px;
+    width: 100%;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    text-align: center;
+}
+
+.title{
+    color: white;
+    font-size: 2.8rem;
+    grid-column: 1/4;
+    margin: auto;
+    margin-left: 50px;
+}
+
+a{
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 15px;
+    height: 50px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+#First-Button{
+    grid-column: 5;
+}
+
+#Second-Button{
+    grid-column: 6;
+    margin-left: 50px;
+}
+
+.container{
+    margin: auto;
+    width: 70vw;
+}
+
+#textareaAuthor{
+    width: 100%;
+    height: 10%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;   
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+#textareaMessage{
+    width: 100%;
+    height: 70%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;   
+    font-size: 1.4rem;
+}
+
+@media(max-width: 1200px){
+    .title{
+        grid-column: 1/5;
+        font-size: 1.8rem;
+    }
+
+    a{
+        font-size: 1.2rem;
+        width: 120px
+    }
+
+    #First-Button{
+        grid-column: 6;
+    }
+    
+    #Second-Button{
+        grid-column: 7;
+        margin-left: 20px;
+    }
+    .container{
+        width: 100vw;
+    }
+}
+
+@media(max-width: 500px){
+    .title{
+        grid-row: 1/2;
+        font-size: 1.8rem;
+        margin: auto;
+    }
+
+    a{
+        font-size: 1.2rem;
+        width: 120px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    #First-Button{
+        grid-row: 2;
+        grid-column: 2;
+        margin-left: auto;
+        height: 40px;
+    }
+    
+    #Second-Button{
+        grid-row: 2;
+        grid-column: 1;
+        margin-left: auto;
+        height: 40px;
+    }
+
+    .nav{
+        height: 150px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+}
